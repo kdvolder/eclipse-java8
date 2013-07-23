@@ -10,6 +10,12 @@
 	<packaging>pom</packaging>
 
 	<modules>
+	    <!-- ensure using our local modified platform parent pom
+	      -- otherwise trouble resolving stuff from Eclipse 4.3 update
+	      -- site when building patched plugins
+	      --> 
+	    <module>git/eclipse-platform-parent/pom.xml</module>
+	
 		<!-- jdt patch changed plugins -->
 	    <module>git/eclipse.jdt.core/org.eclipse.jdt.core</module>
 	    <module>git/eclipse.jdt.debug/org.eclipse.jdt.debug</module>
