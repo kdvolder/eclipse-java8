@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Should delete almost everything in this directory to
+# do a clean checkout.
+#
+# The only things that shouldn't be deleted are
+#   - eclipse-platform-parent and its contents
+#   - the java8-XXX batch scripts
+
+rm -fr eclipse.*
+rm -fr rt.equinox.*
