@@ -89,20 +89,10 @@
 
 		<skip.source.check>true</skip.source.check>
 
-		<test.vmargs>${test.osvmargs}</test.vmargs>
-		<test.osvmargs></test.osvmargs>
-		<test.useUIThread>true</test.useUIThread>
-		<test.skip>${maven.test.skip}</test.skip>
-
-
-<!-- 		<maven.test.error.ignore>true</maven.test.error.ignore>
-		<maven.test.failure.ignore>true</maven.test.failure.ignore> -->
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<encoding>UTF-8</encoding>
 		
-		<sts.test.cache>${user.home}/.sts-test-cache</sts.test.cache>
-
 	</properties>
 
 	<profiles>
@@ -144,7 +134,7 @@
 			</repositories>
 		</profile>
 
-		<profile>
+<!--		<profile>
 			<id>build.springsource.com</id>
 			<activation>
 				<property>
@@ -158,9 +148,9 @@
 				<p2.qualifier>CI-B${bamboo.buildNumber}</p2.qualifier>
 				<p2.replaceQualifier>true</p2.replaceQualifier>
 			</properties>
-		</profile>
+		</profile> -->
 
-		<profile>
+<!--		<profile>
 			<id>osx</id>
 			<activation>
 				<property>
@@ -171,15 +161,15 @@
 			<properties>
 				<test.osvmargs>-Dosgi.ws=cocoa -XstartOnFirstThread</test.osvmargs>
 			</properties>
-		</profile>
+		</profile> -->
 
-		<profile>
+<!--		<profile>
 			<id>bamboo-signing</id>
 			<properties>
 				<signing.store.password>${env.bamboo_signing_store_password}</signing.store.password>
 				<signing.key.password>${env.bamboo_signing_key_password}</signing.key.password>
 			</properties>
-		</profile>
+		</profile> -->
 
 	</profiles>
 
