@@ -17,7 +17,7 @@
     </parent>
 
     <properties>
-        <tycho.scmUrl>scm:git:git://git.eclipse.org/gitroot/jdt/eclipse.jdt.core.git</tycho.scmUrl>
+        <tycho.scmUrl>scm:git:git@github.com:kdvolder/eclipse-java8.git</tycho.scmUrl>
     </properties>
 
 	<modules>
