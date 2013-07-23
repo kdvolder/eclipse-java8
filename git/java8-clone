@@ -19,7 +19,7 @@
 #         org.eclipse.pde.api.tools.ui - eclipse.pde.ui.git 
 
 function checkout {
-   if [-a $2]
+   if [ -a $2 ]
    then
        cd $2 ; git pull ; git status ; cd ..
    else
