@@ -28,7 +28,9 @@ function checkout {
    fi
    if [ -a $2/pom.xml ] 
    then 
+      echo Changing parent pom
       sed -i 's/>eclipse-platform-parent</>java8-eclipse-platform-parent</' $2/pom.xml
+      cd $2 ; git diff ; cd ..
    fi
 }
 
