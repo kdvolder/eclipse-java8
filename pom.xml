@@ -11,9 +11,8 @@
 
 	<modules>
 	    <!-- ensure using our local modified platform parent pom
-	      -- otherwise trouble resolving stuff from Eclipse 4.3 update
-	      -- site when building patched plugins
-	      --> 
+	         otherwise trouble resolving stuff from Eclipse 4.3 update
+	         site when building patched plugins --> 
 	    <module>git/eclipse-platform-parent/pom.xml</module>
 	
 		<!-- jdt patch changed plugins -->
