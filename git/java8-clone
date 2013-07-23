@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# List of things that need patching below
+# Format:
+
+# <feature> - <repo>
+#    <plugin> - <repo>
+
+#org.eclipse.jdt - eclipse.jdt.git 
+#         org.eclipse.jdt.core - eclipse.jdt.core.git 
+#         org.eclipse.jdt.debug - eclipse.jdt.debug.git 
+#         org.eclipse.jdt.debug.ui - eclipse.jdt.debug.git 
+#         org.eclipse.jdt.launching - eclipse.jdt.debug.git 
+#         org.eclipse.jdt.ui - eclipse.jdt.ui.git 
+#org.eclipse.rcp - ?
+#         org.eclipse.osgi - rt.equinox.framework.git 
+#org.eclipse.pde - ?
+#         org.eclipse.pde.api.tools - eclipse.pde.ui.git 
+#         org.eclipse.pde.api.tools.ui - eclipse.pde.ui.git 
+
+
+#feaure repo
+git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.git
+
+#plugin repos
+git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.core.git
+cd eclipse.jdt.core ; git checkout BETA_JAVA8 ; cd ..
+
+git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.debug.git
+cd eclipse.jdt.debug ; git checkout BETA_JAVA8 ; cd ..
+
+git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.ui.git
+cd eclipse.jdt.ui ; git checkout BETA_JAVA8 ; cd ..
+
+git clone git://git.eclipse.org/gitroot/equinox/rt.equinox.framework.git
+cd rt.equinox.framework ; git checkout BETA_JAVA8 ; cd ..
+
+git clone git://git.eclipse.org/gitroot/pde/eclipse.pde.git
+
+git clone git://git.eclipse.org/gitroot/pde/eclipse.pde.ui.git
+cd eclipse.pde.ui ; git checkout BETA_JAVA8 ; cd ..
