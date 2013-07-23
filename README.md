@@ -1,7 +1,7 @@
 Java 8 Eclipse Patches
 ======================
 
-Build an update site containing Fetaure patches that can be applied to
+Build an update site containing Feature Patches that can be applied to
 Eclipse 4.3.
 
 The patches are based on code in BETA_JAVA8 branches of various git
@@ -19,4 +19,4 @@ repositories on git.eclipse.org.
  Upon succesfull completion an update site is built in 
    `org.springsource.ide.eclipse.java8.site/target/site`
    
- This site can be installed into an Eclipse 4.3 instance.
+ This contents of this site can be installed into an Eclipse 4.3 instance.
