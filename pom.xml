@@ -17,12 +17,11 @@
 	
 		<!-- jdt patch changed plugins -->
 	    <module>git/eclipse.jdt.core/org.eclipse.jdt.core</module>
-<!--
 	    <module>git/eclipse.jdt.debug/org.eclipse.jdt.debug</module>
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.debug.ui</module>
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.launching</module>
 		<module>git/eclipse.jdt.ui/org.eclipse.jdt.ui</module>
--->
+
 		<!-- jdt patch   
 		<module>org.eclipse.jdt.java8patch</module>
  -->
