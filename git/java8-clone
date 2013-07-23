@@ -18,24 +18,30 @@
 #         org.eclipse.pde.api.tools - eclipse.pde.ui.git 
 #         org.eclipse.pde.api.tools.ui - eclipse.pde.ui.git 
 
+function checkout {
+   if [-a $2]
+   then
+       cd $2 ; git pull ; git status ; cd ..
+   else
+       git clone $1
+       cd $2 ; git checkout BETA_JAVA8 ; cd ..
+   fi
+
+}
+
+function clone {
+   git clone $1
+}
 
 #feaure repo
-git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.git
+#clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.git
 
 #plugin repos
-git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.core.git
-cd eclipse.jdt.core ; git checkout BETA_JAVA8 ; cd ..
+checkout git://git.eclipse.org/gitroot/jdt/eclipse.jdt.core.git eclipse.jdt.core
+checkout git://git.eclipse.org/gitroot/jdt/eclipse.jdt.debug.git eclipse.jdt.debug
+checkout git://git.eclipse.org/gitroot/jdt/eclipse.jdt.ui.git eclipse.jdt.ui
+checkout git://git.eclipse.org/gitroot/equinox/rt.equinox.framework.git rt.equinox.framework
 
-git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.debug.git
-cd eclipse.jdt.debug ; git checkout BETA_JAVA8 ; cd ..
+#clone git://git.eclipse.org/gitroot/pde/eclipse.pde.git
 
-git clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.ui.git
-cd eclipse.jdt.ui ; git checkout BETA_JAVA8 ; cd ..
-
-git clone git://git.eclipse.org/gitroot/equinox/rt.equinox.framework.git
-cd rt.equinox.framework ; git checkout BETA_JAVA8 ; cd ..
-
-git clone git://git.eclipse.org/gitroot/pde/eclipse.pde.git
-
-git clone git://git.eclipse.org/gitroot/pde/eclipse.pde.ui.git
-cd eclipse.pde.ui ; git checkout BETA_JAVA8 ; cd ..
+checkout git://git.eclipse.org/gitroot/pde/eclipse.pde.ui.git eclipse.pde.ui
