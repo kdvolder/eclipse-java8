@@ -16,6 +16,10 @@
        <relativePath>git/eclipse-platform-parent</relativePath>
     </parent>
 
+    <properties>
+        <tycho.scmUrl>scm:git:git://git.eclipse.org/gitroot/jdt/eclipse.jdt.core.git</tycho.scmUrl>
+    </properties>
+
 	<modules>
 	    <!-- ensure using our local modified platform parent pom
 	         otherwise trouble resolving stuff from Eclipse 4.3 update
@@ -33,8 +37,7 @@
 		<module>org.eclipse.jdt.java8patch</module>
 		
 		<!-- update site 
-		<module>org.springsource.ide.eclipse.java8.site</module>
-		-->
+		<module>org.springsource.ide.eclipse.java8.site</module> -->
 	</modules>
 
 

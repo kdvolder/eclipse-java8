@@ -8,9 +8,10 @@
     <artifactId>org.springsource.ide.eclipse.java8</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <properties>
+  
+<!--  <properties>
   	    <p2.qualifier>e43</p2.qualifier>
-  </properties>  
+  </properties>  -->
   
   <artifactId>org.eclipse.jdt.java8patch</artifactId>
   <packaging>eclipse-feature</packaging>
