@@ -9,6 +9,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+    <parent>
+       <groupId>org.eclipse</groupId>
+       <artifactId>java8-eclipse-platform-parent</artifactId>
+       <version>4.3.0-SNAPSHOT</version>
+       <relativePath>git/eclipse-platform-parent</relativePath>
+    </parent>
+
 	<modules>
 	    <!-- ensure using our local modified platform parent pom
 	         otherwise trouble resolving stuff from Eclipse 4.3 update
@@ -22,9 +29,8 @@
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.launching</module>
 		<module>git/eclipse.jdt.ui/org.eclipse.jdt.ui</module>
 
-		<!-- jdt patch   
+		<!-- jdt patch -->
 		<module>org.eclipse.jdt.java8patch</module>
- -->
 		
 		<!-- update site 
 		<module>org.springsource.ide.eclipse.java8.site</module>
