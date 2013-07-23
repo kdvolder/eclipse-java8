@@ -1,0 +1,10 @@
+/git/eclipse.jdt
+/git/eclipse.jdt.core
+/git/eclipse.jdt.debug
+/git/eclipse.jdt.ui
+/git/eclipse.pde
+/git/eclipse.pde.ui
+/git/eclipse.platform.releng.aggregator
+*~
+/git/rt.equinox.framework
+target
