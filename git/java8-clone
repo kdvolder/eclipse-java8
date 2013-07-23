@@ -21,12 +21,15 @@
 function checkout {
    if [ -a $2 ]
    then
-       cd $2 ; git pull ; git status ; cd ..
+       cd $2 ; git reset --hard HEAD ; git pull ; git status ; cd ..
    else
        git clone $1
        cd $2 ; git checkout BETA_JAVA8 ; cd ..
    fi
-
+   if [ -a $2/pom.xml ] 
+   then 
+      sed -i 's/>eclipse-platform-parent</>java8-eclipse-platform-parent</' $2/pom.xml
+   fi
 }
 
 function clone {
