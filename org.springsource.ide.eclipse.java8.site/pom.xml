@@ -21,6 +21,10 @@
   	    <activation>
            <!-- <activeByDefault>true</activeByDefault> -->
   	       <property>
+  	          <!-- note: activation based on 'accessKey' property would be more
+	  	             logical, but this property is defined by another profile
+	  	             and it is not possible to chain profile activation.
+  	            -->
   	          <name>env.bamboo_s3_properties</name>
   	       </property>
   	    </activation>
