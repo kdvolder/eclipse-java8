@@ -22,7 +22,7 @@
         <dist.type>nightly</dist.type>
         <dist.path>snapshot/TOOLS/java8</dist.path> <!-- upload path on s3 -->
     </properties>
-
+    
 	<modules>
 	    <!-- ensure using our local modified platform parent pom
 	         otherwise trouble resolving stuff from Eclipse 4.3 update
@@ -56,6 +56,35 @@
 			  <signing.key.password>${env.bamboo_signing_key_password}</signing.key.password>
 		   </properties>
 		</profile>
+		<profile>
+		  <id>bamboo-s3</id>
+		  <activation>
+		     <property>env.bamboo_s3_properties</property>
+		  </activation>
+          <build>
+	        <plugins>
+	          <plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>properties-maven-plugin</artifactId>
+		        <version>1.0-alpha-2</version>
+		        <executions>
+		          <execution>
+			        <phase>initialize</phase>
+			        <goals>
+			          <goal>read-project-properties</goal>
+			        </goals>
+			        <configuration>
+			          <quiet>true</quiet>
+			          <files>
+				        <file>${env.bamboo_s3_properties}</file>
+			          </files>
+			        </configuration>
+		          </execution>
+		        </executions>
+	          </plugin>
+	        </plugins>
+	      </build>
+		</profile>
    </profiles>
 
    <repositories>   
@@ -87,6 +116,8 @@
 			<url>https://oss.sonatype.org/content/groups/public/</url>
 		</pluginRepository>
 	</pluginRepositories>
+   
+   
    
    
 </project>
