@@ -31,7 +31,6 @@
         <properties>
            <dist.accessKey>${accessKey}</dist.accessKey>
            <dist.secretKey>${secretKey}</dist.secretKey>
-           <dist.bucket>dist.springframework.org</dist.bucket>
         </properties>  
 		<build>
 			<plugins>

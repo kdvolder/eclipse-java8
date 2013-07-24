@@ -20,7 +20,11 @@
         <tycho.scmUrl>scm:git:git://github.com/kdvolder/eclipse-java8.git</tycho.scmUrl>
         <dist.name>eclipse-java8-support</dist.name>
         <dist.type>nightly</dist.type>
-        <dist.path>snapshot/TOOLS/java8</dist.path> <!-- upload path on s3 -->
+        
+        <!-- upload location on s3: -->
+        <dist.bucket>dist.springsource.com</dist.bucket>
+        <dist.path>snapshot/TOOLS/java8</dist.path>
+        
     </properties>
     
 	<modules>
