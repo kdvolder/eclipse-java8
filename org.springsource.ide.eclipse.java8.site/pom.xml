@@ -19,9 +19,9 @@
   <profiles>
   	<profile>
   	    <activation>
-<!--            <activeByDefault>true</activeByDefault> -->
+           <!-- <activeByDefault>true</activeByDefault> -->
   	       <property>
-  	          <name>accessKey</name>
+  	          <name>env.bamboo_s3_properties</name>
   	       </property>
   	    </activation>
         <properties>
