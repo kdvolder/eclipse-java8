@@ -3,5 +3,8 @@
    <feature url="features/org.eclipse.jdt.java8patch_0.0.1.qualifier.jar" id="org.eclipse.jdt.java8patch" version="0.0.1.qualifier" patch="true">
       <category name="Java 8"/>
    </feature>
+   <feature url="features/org.eclipse.rcp.java8patch_0.0.1.qualifier.jar" id="org.eclipse.rcp.java8patch" version="0.0.1.qualifier" patch="true">
+      <category name="Java 8"/>
+   </feature>
    <category-def name="Java 8" label="Java 8"/>
 </site>

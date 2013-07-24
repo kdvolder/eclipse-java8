@@ -23,4 +23,11 @@
       <import feature="org.eclipse.rcp" version="4.3.0.v20130605-2000" patch="true"/>
    </requires>
 
+   <plugin
+         id="org.eclipse.osgi"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
