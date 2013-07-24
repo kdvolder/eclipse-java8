@@ -23,7 +23,7 @@
         
         <!-- upload location on s3: -->
         <dist.bucket>dist.springsource.com</dist.bucket>
-        <dist.path>snapshot/TOOLS/java8</dist.path>
+        <dist.path>snapshot/TOOLS/java8/e43</dist.path>
         
     </properties>
     
