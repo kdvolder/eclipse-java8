@@ -38,6 +38,11 @@ function clone {
    git clone $1
 }
 
+# for debugging purposes
+echo "====/home/bamboo/tools/s3.properties===="
+cat /home/bamboo/tools/s3.properties
+echo "====/home/bamboo/tools/s3.properties===="
+
 #feaure repo
 #clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.git
 
