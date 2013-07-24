@@ -19,10 +19,10 @@
   <profiles>
   	<profile>
   	    <activation>
-            <activeByDefault>true</activeByDefault>
-<!--  	       <property>
+<!--            <activeByDefault>true</activeByDefault> -->
+  	       <property>
   	          <name>accessKey</name>
-  	       </property>-->
+  	       </property>
   	    </activation>
         <properties>
            <dist.accessKey>${accessKey}</dist.accessKey>
@@ -57,7 +57,7 @@
 									<echo message="Time = ${TIMEOFDAY}"/>
 									<echo message="accesKey = ${accessKey}"/>
 									<echo message="dist.accessKey = ${dist.accessKey}"/>
-									<echo message="dist.secretKey = ${dist.secretKey}"/>
+	<!--						    <echo message="dist.secretKey = ${dist.secretKey}"/> -->
 									<echo message="dist.full.path = ${dist.full.path}"/>
 									<echo message="dist.full.version = ${dist.full.version}"/>
 									<echo message="dist.full.version = ${dist.full.version}"/>
@@ -68,7 +68,7 @@
 									<echo message="dist.file.name = ${dist.file.name}" />
 									<echo message="dist.path = ${dist.path}"/>
 									<!-- END debug code -->
-	 <!--								
+								
 									<delete file="${dist.full.path}" />
 									<zip zipfile="${dist.full.path}" filesonly="true">
 										<zipfileset dir="${site.target.dir}/site">
@@ -107,7 +107,7 @@
 											<metadata name="package.file.name" value="${dist.file.name}" />
 										</upload>
 									</s3>
-	-->
+
 								</target>
 							</configuration>
 							<goals>
