@@ -33,21 +33,28 @@
 	         site when building patched plugins 
 	    <module>git/eclipse-platform-parent/pom.xml</module> -->
 	
-		<!-- jdt patch changed plugins -->
+		<!-- JDT changed plugins -->
 	    <module>git/eclipse.jdt.core/org.eclipse.jdt.core</module>
 	    <module>git/eclipse.jdt.debug/org.eclipse.jdt.debug</module>
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.debug.ui</module>
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.launching</module>
 		<module>git/eclipse.jdt.ui/org.eclipse.jdt.ui</module>
 
-		<!-- jdt patch -->
+		<!-- JDT patch -->
 		<module>org.eclipse.jdt.java8patch</module>
 		
-		<!-- rcp patch changed plugins -->
+		<!-- RCP changed plugins -->
 		<module>git/rt.equinox.framework/bundles/org.eclipse.osgi</module>
 		
-		<!-- rcp patch -->
+		<!-- RCP patch -->
 		<module>org.eclipse.rcp.java8patch</module>
+		
+		<!-- PDE patch changed plugins -->
+		<module>git/eclipse.pde.ui/apitools/org.eclipse.pde.api.tools</module>
+		<module>git/eclipse.pde.ui/apitools/org.eclipse.pde.api.tools.ui</module>
+		
+		<!-- PDE patch -->
+		<module>org.eclipse.pde.java8patch</module>
 		
 		<!-- update site -->
 		<module>org.springsource.ide.eclipse.java8.site</module>
