@@ -43,6 +43,12 @@
 		<!-- jdt patch -->
 		<module>org.eclipse.jdt.java8patch</module>
 		
+		<!-- rcp patch changed plugins -->
+		<module>git/rt.equinox.framework/bundles/org.eclipse.osgi</module>
+		
+		<!-- rcp patch -->
+		<module>org.eclipse.rcp.java8patch</module>
+		
 		<!-- update site -->
 		<module>org.springsource.ide.eclipse.java8.site</module>
 	</modules>
