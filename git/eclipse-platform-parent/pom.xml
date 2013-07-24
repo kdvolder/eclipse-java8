@@ -319,6 +319,9 @@
             </excludeResources>
           </configuration>
         </plugin>
+<!--    Disable because it seems to be messing with us when we try to
+        Build things that aren't in git.eclipse.org repo. 
+         
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-packaging-plugin</artifactId>
@@ -357,7 +360,7 @@
 				</fileSet>
 			</additionalFileSets>
           </configuration>
-        </plugin>
+        </plugin> -->
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-surefire-plugin</artifactId>
