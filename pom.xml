@@ -59,7 +59,7 @@
 		<profile>
 		  <id>bamboo-s3</id>
 		  <activation>
-		     <property>env.bamboo_s3_properties</property>
+		     <property><name>env.bamboo_s3_properties</name></property>
 		  </activation>
           <build>
 	        <plugins>
