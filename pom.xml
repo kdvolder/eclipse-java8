@@ -18,13 +18,15 @@
 
     <properties>
         <tycho.scmUrl>scm:git:git://github.com/kdvolder/eclipse-java8.git</tycho.scmUrl>
+        <dist.name>eclipse-java8-support</dist.name>
+        <dist.type>nightly</dist.type>
     </properties>
 
 	<modules>
 	    <!-- ensure using our local modified platform parent pom
 	         otherwise trouble resolving stuff from Eclipse 4.3 update
-	         site when building patched plugins --> 
-	    <module>git/eclipse-platform-parent/pom.xml</module>
+	         site when building patched plugins 
+	    <module>git/eclipse-platform-parent/pom.xml</module> -->
 	
 		<!-- jdt patch changed plugins -->
 	    <module>git/eclipse.jdt.core/org.eclipse.jdt.core</module>
@@ -40,5 +42,50 @@
 		<module>org.springsource.ide.eclipse.java8.site</module>
 	</modules>
 
+    <profiles>
+	    <profile>
+		   <id>bamboo-signing</id>
+		   <activation>
+		       <property>     
+		          <name>env.bamboo_signing_key_password</name> 
+		       </property>
+		   </activation>
+		   <properties>
+			  <signing.store.password>${env.bamboo_signing_store_password}</signing.store.password>
+			  <signing.key.password>${env.bamboo_signing_key_password}</signing.key.password>
+		   </properties>
+		</profile>
+   </profiles>
 
+   <repositories>   
+	<!-- required for Maven and Ant AWS dependency -->
+	<repository>
+		<id>springsource-maven-release</id>
+		<name>SpringSource Maven Release Repository</name>
+		<url>http://repository.springsource.com/maven/bundles/release</url>
+	</repository>
+   </repositories>
+   <pluginRepositories>
+		<!-- required for Maven and Ant AWS dependency -->
+		<pluginRepository>
+			<id>spring-maven-release</id>
+			<name>Spring Maven Release Repository</name>
+			<url>http://maven.springframework.org/release</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>springsource-maven-release</id>
+			<name>SpringSource Maven Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>tycho-staging</id>
+			<url>https://oss.sonatype.org/content/repositories/orgeclipsetycho-115/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>tycho-snapshots</id>
+			<url>https://oss.sonatype.org/content/groups/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+   
+   
 </project>

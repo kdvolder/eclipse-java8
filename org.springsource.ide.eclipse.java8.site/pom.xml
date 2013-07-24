@@ -16,39 +16,22 @@
   <packaging>eclipse-update-site</packaging>
   <name>org.springsource.ide.eclipse.java8.site</name>
 	
-  <properties>
-	<dist.accessKey>${accessKey}</dist.accessKey>
-	<dist.secretKey>${secretKey}</dist.secretKey>
-  </properties>  
-
   <profiles>
   	<profile>
-  		<!-- stuff related to zipping and uploading the update site is only activated for
-  		     37 builds -->
-		<id>e37</id>
+  	    <activation>
+            <activeByDefault>true</activeByDefault>
+<!--  	       <property>
+  	          <name>accessKey</name>
+  	       </property>-->
+  	    </activation>
+        <properties>
+           <dist.accessKey>${accessKey}</dist.accessKey>
+           <dist.secretKey>${secretKey}</dist.secretKey>
+           <dist.bucket>dist.springframework.org</dist.bucket>
+        </properties>  
 		<build>
 			<plugins>
-			  <plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>properties-maven-plugin</artifactId>
-				<version>1.0-alpha-2</version>
-				<executions>
-				  <execution>
-					<phase>initialize</phase>
-					<goals>
-					  <goal>read-project-properties</goal>
-					</goals>
-					<configuration>
-					  <quiet>true</quiet>
-					  <files>
-						<file>${dist.properties}</file>
-					  </files>
-					</configuration>
-				  </execution>
-				</executions>
-			  </plugin>
-	
-				<plugin>
+			   <plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>1.6</version>
@@ -58,26 +41,37 @@
 							<phase>deploy</phase>
 							<configuration>
 								<target>
-	
 									<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
 									<taskdef resource="org/springframework/build/aws/ant/antlib.xml" />
 	
 									<property name="site.target.dir" value="${project.build.directory}" />
 									<property name="dist.full.version" value="${unqualifiedVersion}.${buildQualifier}" />
 	
-									<property name="dist.file.name" value="${dist.project}-${dist.full.version}-updatesite.zip" />
-									<property name="dist.full.path" value="${site.target.dir}/repository/${dist.file.name}" />
-									
-									<!-- BEG debug code -->
+									<property name="dist.file.name" value="${dist.name}-${dist.full.version}-updatesite.zip" />
+ 									<property name="dist.full.path" value="${site.target.dir}/site/${dist.file.name}" />
+ 	 									
+									<!-- BEG debug code print out all the propery values used in the script code below -->
 									<tstamp>
 	    								<format property="TIMEOFDAY" pattern="kk:mm:ss"/>
 	  								</tstamp>
 									<echo message="Time = ${TIMEOFDAY}"/>
-									<!-- END debug code -->
+									<echo message="accesKey = ${accessKey}"/>
+									<echo message="dist.accessKey = ${dist.accessKey}"/>
+									<echo message="dist.secretKey = ${dist.secretKey}"/>
+									<echo message="dist.full.path = ${dist.full.path}"/>
+									<echo message="dist.full.version = ${dist.full.version}"/>
+									<echo message="dist.full.version = ${dist.full.version}"/>
+									<echo message="dist.bucket = ${dist.bucket}"/>
 									
+                                    <echo message="dist.name = ${dist.name}" />
+									<echo message="dist.type = ${dist.type}" />
+									<echo message="dist.file.name = ${dist.file.name}" />
+									<echo message="dist.path = ${dist.path}"/>
+									<!-- END debug code -->
+	 <!--								
 									<delete file="${dist.full.path}" />
 									<zip zipfile="${dist.full.path}" filesonly="true">
-										<zipfileset dir="${site.target.dir}/repository">
+										<zipfileset dir="${site.target.dir}/site">
 											<exclude name="*.zip" />
 											<exclude name="**/*.gz" />
 										</zipfileset>
@@ -98,7 +92,7 @@
 										</delete>
 	
 										<upload bucketName="${dist.bucket}" toDir="${dist.path}" publicRead="true">
-											<fileset dir="${site.target.dir}/repository">
+											<fileset dir="${site.target.dir}/site">
 												<include name="**/*" />
 												<include name="**" />
 												<exclude name="*.zip" />
@@ -113,7 +107,7 @@
 											<metadata name="package.file.name" value="${dist.file.name}" />
 										</upload>
 									</s3>
-	
+	-->
 								</target>
 							</configuration>
 							<goals>

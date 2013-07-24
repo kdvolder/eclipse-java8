@@ -52,11 +52,14 @@
 
   </properties>
   <repositories>
+    <!-- BEG Java 8 build -->
     <repository>
+      <!-- to resolve bits of eclipe we aren't patching and so we don't build -->
       <id>eclipse43</id>
       <url>http://download.eclipse.org/eclipse/updates/4.3</url>
       <layout>p2</layout>
     </repository>
+    <!-- END Java 8 Build -->
     <repository>
       <id>orbit</id>
       <url>${orbit-repo.url}</url>
@@ -319,6 +322,7 @@
             </excludeResources>
           </configuration>
         </plugin>
+<!-- BEG Java 8 Build -->
 <!--    Disable because it seems to be messing with us when we try to
         Build things that aren't in git.eclipse.org repo. 
          
@@ -361,6 +365,7 @@
 			</additionalFileSets>
           </configuration>
         </plugin> -->
+<!-- END Java 8 Build -->
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-surefire-plugin</artifactId>
@@ -427,6 +432,18 @@
             </baselineRepositories>
           </configuration>
         </plugin>
+      <!--- BEG Java 8 build:
+         Disable default deploy because we don't want to upload this patched stuff to repo.eclipse.org.
+         http://stackoverflow.com/questions/12751724/can-i-modify-the-maven-deploy-phase-to-replace-the-maven-deploy-plugin-with-my-o
+        -->  
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+            <skip>true</skip>
+        </configuration>
+      </plugin>
+      <!--- BEG Java 8 build -->  
+      
       </plugins>
     </pluginManagement>
   </build>
