@@ -36,8 +36,8 @@
 		<!-- jdt patch -->
 		<module>org.eclipse.jdt.java8patch</module>
 		
-		<!-- update site 
-		<module>org.springsource.ide.eclipse.java8.site</module> -->
+		<!-- update site -->
+		<module>org.springsource.ide.eclipse.java8.site</module>
 	</modules>
 
 
