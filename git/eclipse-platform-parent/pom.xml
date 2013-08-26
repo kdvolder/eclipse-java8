@@ -442,7 +442,7 @@
             <skip>true</skip>
         </configuration>
       </plugin>
-      <!--- BEG Java 8 build -->  
+      <!--- END Java 8 build -->  
       
       </plugins>
     </pluginManagement>
