@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.jdt.java8patch_0.0.1.qualifier.jar" id="org.eclipse.jdt.java8patch" version="0.0.1.qualifier" patch="true">
+   <feature url="features/org.eclipse.jdt.java8patch_1.0.0.qualifier.jar" id="org.eclipse.jdt.java8patch" version="1.0.0.qualifier" patch="true">
       <category name="Java 8"/>
    </feature>
-   <feature url="features/org.eclipse.rcp.java8patch_0.0.1.qualifier.jar" id="org.eclipse.rcp.java8patch" version="0.0.1.qualifier" patch="true">
+   <feature url="features/org.eclipse.rcp.java8patch_1.0.0.qualifier.jar" id="org.eclipse.rcp.java8patch" version="1.0.0.qualifier" patch="true">
       <category name="Java 8"/>
    </feature>
-   <feature url="features/org.eclipse.pde.java8patch_0.0.1.qualifier.jar" id="org.eclipse.pde.java8patch" version="0.0.1.qualifier" patch="true">
+   <feature url="features/org.eclipse.pde.java8patch_1.0.0.qualifier.jar" id="org.eclipse.pde.java8patch" version="1.0.0.qualifier" patch="true">
       <category name="Java 8"/>
    </feature>
    <category-def name="Java 8" label="Java 8"/>
