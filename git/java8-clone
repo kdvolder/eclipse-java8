@@ -21,7 +21,7 @@
 function checkout {
    if [ -a $2 ]
    then
-       cd $2 ; git reset --hard HEAD ; git pull ; git status ; cd ..
+       cd $2 ; git reset --hard HEAD ; git clean -fxd ; git pull ; git status ; cd ..
    else
        git clone $1
        cd $2 ; git checkout BETA_JAVA8 ; cd ..
