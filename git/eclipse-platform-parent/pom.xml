@@ -365,6 +365,17 @@
 			</additionalFileSets>
           </configuration>
         </plugin> -->
+<!--  Alternate configuration. Not using jgit provider because seems confused 
+      (by having us checked out projects on the commandline?)
+  -->        
+	     <plugin>
+	        <groupId>org.eclipse.tycho</groupId>
+	        <artifactId>tycho-packaging-plugin</artifactId>
+	        <version>${tycho.version}</version>
+	        <configuration>
+               <format>'v'yyyyMMdd-HHmm'_BETA_JAVA8'</format>
+	        </configuration>
+	     </plugin>
 <!-- END Java 8 Build -->
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
