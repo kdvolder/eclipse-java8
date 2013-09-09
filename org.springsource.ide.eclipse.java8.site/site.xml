@@ -10,11 +10,7 @@
       <category name="Java 8"/>
    </feature>
    <category-def name="Java 8" label="Eclipse Java 8 Support (BETA)">
-      <description>
-         Eclipse Java 8 Support (BETA) - This is an implementation of an early-draft
-specification developed under the Java Community Process (JCP) and is
-made available for testing and evaluation purposes only. The code is not
-compatible with any specification of the JCP.
+      <description>Eclipse Java 8 Support (BETA) - This is an implementation of an early-draft specification developed under the Java Community Process (JCP) and is made available for testing and evaluation purposes only. The code is not compatible with any specification of the JCP.
       </description>
    </category-def>
 </site>
