@@ -9,5 +9,12 @@
    <feature url="features/org.eclipse.pde.java8patch_1.0.0.qualifier.jar" id="org.eclipse.pde.java8patch" version="1.0.0.qualifier" patch="true">
       <category name="Java 8"/>
    </feature>
-   <category-def name="Java 8" label="Java 8"/>
+   <category-def name="Java 8" label="Eclipse Java 8 Support (BETA)">
+      <description>
+         Eclipse Java 8 Support (BETA) - This is an implementation of an early-draft
+specification developed under the Java Community Process (JCP) and is
+made available for testing and evaluation purposes only. The code is not
+compatible with any specification of the JCP.
+      </description>
+   </category-def>
 </site>
