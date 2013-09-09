@@ -91,6 +91,7 @@
 												<include name="artifacts.jar" />
 												<include name="plugins/**" />
 												<include name="features/**" />
+												<include name="*-updatesite.*"/>
 											</fileset>
 										</delete>
 	
