@@ -39,9 +39,9 @@ function clone {
 }
 
 # for debugging purposes (use caution with this it dumps secret keys into the build log)
-# echo "====/home/bamboo/tools/s3.properties===="
-# cat /home/bamboo/tools/s3.properties
-# echo "====/home/bamboo/tools/s3.properties===="
+echo "====/home/bamboo/tools/s3.properties===="
+cat /home/bamboo/tools/s3.properties
+echo "====/home/bamboo/tools/s3.properties===="
 
 #feaure repo
 #clone git://git.eclipse.org/gitroot/jdt/eclipse.jdt.git
