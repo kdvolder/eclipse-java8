@@ -36,6 +36,8 @@
 	
 		<!-- JDT changed plugins -->
 	    <module>git/eclipse.jdt.core/org.eclipse.jdt.core</module>
+	    <module>git/eclipse.jdt.core/org.eclipse.jdt.annotation</module>
+	    <module>git/eclipse.jdt.core/org.eclipse.jdt.annotation_v1</module>
 	    <module>git/eclipse.jdt.debug/org.eclipse.jdt.debug</module>
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.debug.ui</module>
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.launching</module>
