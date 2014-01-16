@@ -42,6 +42,12 @@
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.debug.ui</module>
 		<module>git/eclipse.jdt.debug/org.eclipse.jdt.launching</module>
 		<module>git/eclipse.jdt.ui/org.eclipse.jdt.ui</module>
+		
+		<module>git/eclipse.jdt.core/org.eclipse.jdt.apt.core</module>
+		<module>git/eclipse.jdt.core/org.eclipse.jdt.compiler.apt</module>
+		<module>git/eclipse.jdt.core/org.eclipse.jdt.compiler.tool</module>
+		<module>git/eclipse.jdt.core/org.eclipse.jdt.apt.ui</module>
+		<module>git/eclipse.jdt.core/org.eclipse.jdt.apt.pluggable.core</module>
 
 		<!-- JDT patch -->
 		<module>org.eclipse.jdt.java8patch</module>
