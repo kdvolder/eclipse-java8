@@ -17,7 +17,7 @@ in the jdt.core feature patch).
     This clones all the required external git repo's and checks out
     the BETA_JAVA8 branches.
  3. from the root of this repo run the commands
-    "export JAVA_HOME=<path-to-a-JDK8>"
+    "export JAVA_HOME=...path-to-a-JDK8..."
     "mvn clean install" (Requires maven 3.0 to use tycho).
     
  Upon succesfull completion an update site is built in 
